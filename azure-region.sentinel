@@ -1,0 +1,7 @@
+import "tfconfig"
+
+location_value = tfconfig.resources.azurerm_resource_group.my_rg.config.location
+
+main = rule {
+	location_value contains "East Asia"
+}
